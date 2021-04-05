@@ -5,7 +5,6 @@ import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.miya.roomtest.Ad
-import com.miya.roomtest.Programme
 
 fun covertAdToEntity(ad: Ad, programmeId: Int) = ad.let {
     AdEntity(
@@ -20,15 +19,16 @@ fun covertAdToEntity(ad: Ad, programmeId: Int) = ad.let {
     )
 }
 
-@Entity(tableName = "ad_table",  foreignKeys = [
-    ForeignKey(
-        entity = ProgrammeEntity::class,
-        parentColumns = ["programmeId"],
-        childColumns = ["programmeOwnerId"],
-        onDelete = ForeignKey.CASCADE
-    )
-],
-    indices = [Index("adId")])
+@Entity(
+    tableName = "ad_table", foreignKeys = [
+        ForeignKey(
+            entity = ProgrammeEntity::class,
+            parentColumns = ["programmeId"],
+            childColumns = ["programmeOwnerId"],
+            onDelete = ForeignKey.CASCADE
+        )
+    ], indices = [Index("programmeOwnerId")]
+)
 data class AdEntity(
     @PrimaryKey val adId: Int,
     val adName: String,

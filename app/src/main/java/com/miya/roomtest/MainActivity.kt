@@ -117,6 +117,8 @@ class MainActivity : AppCompatActivity() {
                     for (programmeAndAd in it) {
                         Log.i("liang", gson.toJson(programmeAndAd))
                         Log.i("liang", "adEntities size: ${programmeAndAd.adEntities.size}")
+
+                        // 方法一：
 //                        val adIds = programmeAndAd.adEntities.map {ad->
 //                            Log.i("liang", "ad id: ${ad.adId}")
 //                            ad.adId
@@ -126,6 +128,8 @@ class MainActivity : AppCompatActivity() {
 //                                Log.i("liang", gson.toJson(adAndAdSource))
 //                            }
 //                        }
+
+                        // 方法二：有错误，只会执行一次，暂时不明白为什么
 //                        for (ad in programmeAndAd.adEntities) {
 //                            Log.i("liang", "ad id: ${ad.adId}")
 //                            adDao.getAdAnAdSourcesById(ad.adId).apply {
@@ -134,6 +138,8 @@ class MainActivity : AppCompatActivity() {
 //                                Log.i("liang", gson.toJson(v))
 //                            }
 //                        }
+
+                        // 方法三
                         (programmeAndAd.adEntities.indices).asFlow()
                             .transform { index ->
                                 val adId = programmeAndAd.adEntities[index].adId
@@ -148,7 +154,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun delete(v: View) {
-            val supportSQLiteQuery =  SimpleSQLiteQuery("DELETE FROM programme WHERE programmeId = ?",  arrayOf(23))
+            val supportSQLiteQuery =
+                SimpleSQLiteQuery("DELETE FROM programme WHERE programmeId = ?", arrayOf(23))
             GlobalScope.launch {
                 programmeDao.deleteProgrammeById(supportSQLiteQuery)
             }

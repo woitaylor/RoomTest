@@ -1,0 +1,68 @@
+{
+  "programmeList": [
+    {
+      "programmeId": 23,
+      "adList": [
+        {
+          "adName": "亮亮测试2",
+          "adId": 80,
+          "adPageType": 2,
+          "adSourceList": [
+            {
+              "adSourceType": 1,
+              "switchingEffects": 1,
+              "adCss": "{\"loop\":true,\"direction\":\"horizontal\",\"autoplay\":{\"delay\":5000}}",
+              "adSourceSort": 0,
+              "sourceRunningTime": 5,
+              "pageNum": 1,
+              "adSourceInfo": "http://qiniu.signcc.com/2YNRqUAZST8bkX55Aii36m.jpg;http://qiniu.signcc.com/3OvTJCstx3G1xjlC7ucGKF.jfif;http://qiniu.signcc.com/4dFHaME3zi9BthoiOOV69K.jpg",
+              "adVideoType": 2
+            },
+            {
+              "adSourceType": 2,
+              "switchingEffects": 1,
+              "adCss": "{}",
+              "adSourceSort": 0,
+              "sourceRunningTime": null,
+              "pageNum": 2,
+              "adSourceInfo": "http://qiniu.signcc.com/4o4uUUS7sfpREEfScoI2Mk.MP4",
+              "adVideoType": 2
+            }
+          ],
+          "showStartTime": "18:32:00",
+          "aspectRatio": "50-50",
+          "runningTime": 20,
+          "showEndTime": "19:32:00"
+        },
+        {
+          "adName": "亮亮测试1",
+          "adId": 79,
+          "adPageType": 1,
+          "adSourceList": [
+            {
+              "adSourceType": 2,
+              "switchingEffects": 1,
+              "adCss": "{}",
+              "adSourceSort": 0,
+              "sourceRunningTime": null,
+              "pageNum": 1,
+              "adSourceInfo": "http://qiniu.signcc.com/53TZu5olUNrQoQpvQ7R3VY.mp4",
+              "adVideoType": 2
+            }
+          ],
+          "showStartTime": "18:32:00",
+          "aspectRatio": "100",
+          "runningTime": 20,
+          "showEndTime": "19:32:00"
+        }
+      ],
+      "programmeName": "liangliangTest",
+      "showDate": "2021-04-02"
+    }
+  ],
+  "sourceList": [
+    "http://qiniu.signcc.com/53TZu5olUNrQoQpvQ7R3VY.mp4",
+    "http://qiniu.signcc.com/2YNRqUAZST8bkX55Aii36m.jpg;http://qiniu.signcc.com/3OvTJCstx3G1xjlC7ucGKF.jfif;http://qiniu.signcc.com/4dFHaME3zi9BthoiOOV69K.jpg",
+    "http://qiniu.signcc.com/4o4uUUS7sfpREEfScoI2Mk.MP4"
+  ]
+}
